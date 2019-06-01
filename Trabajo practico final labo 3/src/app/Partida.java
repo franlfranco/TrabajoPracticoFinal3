@@ -4,22 +4,23 @@ public class Partida {
 	private Personaje personaje;
 	private String nombreJugador;
 	private double puntajeJugador;
-	private Mezcladora mezcladora;
 	private ListaDisponibles listaDisponibles;
+	private HiloCronometro cronometro;
 	
 	public Partida() {
 		super();
 	}
 	
-	public Partida(Personaje personaje,String nombreJugador,Mezcladora mezcladora) {
+	public Partida(Personaje personaje,String nombreJugador) {
 		super();
 		this.personaje = personaje;
 		setNombreJugador(nombreJugador);
 		setPuntajeJugador(0);
-		this.mezcladora = mezcladora;
 		listaDisponibles = new ListaDisponibles ();
+		cronometro = new HiloCronometro(new Cronometro());
 	}
 
+	
 	public String getNombreJugador() {
 		return nombreJugador;
 	}
