@@ -1,5 +1,6 @@
 package app;
 
+import java.util.Collection;
 import java.util.HashMap;
 
 public class ListaDeElementos implements IArchivos {
@@ -36,7 +37,15 @@ public class ListaDeElementos implements IArchivos {
 		else return false;
 	}
 	
+	@Override
 	public void leerDeArchivo() {
 		
 	}
+
+	@Override
+	public <T> void cargarArchivo(Collection<T> coleccion) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }

@@ -60,8 +60,7 @@ public class HiloCronometro
 		return cronometro.toString();
 	}
 	
-	public int getPuntaje() {
-		int puntaje= cronometro.getMilisegundos()+cronometro.getSegundos()*1000+cronometro.getMinutos()*60*1000;
-		return puntaje;
+	public int getPuntajeMilisegundos() {
+		return getMinutos()*60*1000+getSegundos()*1000+getMilisegundos();
 	}
 }

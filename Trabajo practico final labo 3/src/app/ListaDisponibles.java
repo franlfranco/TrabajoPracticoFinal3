@@ -1,6 +1,7 @@
 package app;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class ListaDisponibles implements IArchivos {
 	private ArrayList <Elemento> disponibles;
@@ -31,7 +32,14 @@ public class ListaDisponibles implements IArchivos {
 		return false;
 	}
 
+	@Override
 	public void leerDeArchivo() {
+		
+	}
+
+	@Override
+	public <T> void cargarArchivo(Collection<T> coleccion) {
+		// TODO Auto-generated method stub
 		
 	}
 }
