@@ -1,38 +1,45 @@
 package app;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
-public class ListaDisponibles {
-	private ArrayList <ElementoSimple> disponibles;
+public class ListaDisponibles implements IArchivos {
+	private ArrayList <Elemento> disponibles;
 	
 	public ListaDisponibles () {
-		disponibles = new ArrayList <ElementoSimple> ();
-		disponibles.add(new ElementoSimple("P","Persona"));
-		disponibles.add(new ElementoSimple("p","Profesor"));
-		disponibles.add(new ElementoSimple("T","Trabajo"));
-		disponibles.add(new ElementoSimple("C","Criatura"));
-		disponibles.add(new ElementoSimple("F","Felino"));
-		disponibles.add(new ElementoSimple("c","Cobra"));
+		disponibles=new ArrayList<Elemento>();
 	}
 	
-	public void agregarADisponible (ElementoSimple elem) {
-		disponibles.add(elem);
+
+	
+	public void agregar (Elemento elemento) {
+		disponibles.add(elemento);
 	}
 	
-	public ElementoSimple retornarElemento (int index) {
+	public Elemento getElemento (int index) {
 		return disponibles.get(index);
 	}
 	
-	public ArrayList<ElementoSimple> retornarColeccion () {
+	public ArrayList<Elemento> getColeccion () {
 		return disponibles;
 	}
 	
-	public boolean elementoYaDisponible (ElementoSimple elem) {
-		for(ElementoSimple e:disponibles) {
-			if(e.getNombreElemento().equals(elem.getNombreElemento()))
+	public boolean isElemento (Elemento elemento) {
+		for(Elemento e:disponibles) {
+			if(e.getNombreElemento().equals(elemento.getNombreElemento()))
 				return true;
 		}
 		return false;
 	}
 
+	@Override
+	public void leerDeArchivo() {
+		
+	}
+
+	@Override
+	public <T> void cargarArchivo(Collection<T> coleccion) {
+		// TODO Auto-generated method stub
+		
+	}
 }
