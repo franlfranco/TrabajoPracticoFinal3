@@ -2,10 +2,11 @@ package app;
 
 import java.util.ArrayList;
 
-public class ListaDisponibles {
+public class ListaDisponibles implements IArchivos {
 	private ArrayList <Elemento> disponibles;
 	
 	public ListaDisponibles () {
+		disponibles=new ArrayList<Elemento>();
 	}
 	
 
@@ -30,4 +31,7 @@ public class ListaDisponibles {
 		return false;
 	}
 
+	public void leerDeArchivo() {
+		
+	}
 }

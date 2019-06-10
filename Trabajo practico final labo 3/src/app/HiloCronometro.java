@@ -59,4 +59,9 @@ public class HiloCronometro
 	public String getTimer() { ///Retorna string formato: 00:00:00
 		return cronometro.toString();
 	}
+	
+	public int getPuntaje() {
+		int puntaje= cronometro.getMilisegundos()+cronometro.getSegundos()*1000+cronometro.getMinutos()*60*1000;
+		return puntaje;
+	}
 }

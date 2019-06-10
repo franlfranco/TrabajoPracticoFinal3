@@ -3,6 +3,11 @@ package app;
 public class Mezcladora {
 	private ListaDeElementos listaDeElementos;
 	
+	public Mezcladora (ListaDeElementos listaDeElementos) {
+		super();
+		this.listaDeElementos = listaDeElementos;
+	}
+	
 	public String ordenarCodigo (Elemento a,Elemento b) {
 		if(a.getCodigo().compareTo(b.getCodigo())<0)
 			return a.getCodigo()+b.getCodigo();

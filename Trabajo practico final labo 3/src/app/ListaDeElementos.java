@@ -2,7 +2,7 @@ package app;
 
 import java.util.HashMap;
 
-public class ListaDeElementos {
+public class ListaDeElementos implements IArchivos {
 	HashMap <String,Elemento>listaElementos;
 	
 	public ListaDeElementos() {
@@ -36,4 +36,7 @@ public class ListaDeElementos {
 		else return false;
 	}
 	
+	public void leerDeArchivo() {
+		
+	}
 }
