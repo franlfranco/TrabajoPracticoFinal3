@@ -1,11 +1,16 @@
 package app;
 
-import java.io.File;
-import java.util.Collection;
 
 public interface IArchivos {
 	
+	/**
+	 * Método para leer del archivo
+	 */
 	public void leerDeArchivo();
 	
-	public <T> void cargarArchivo(Collection <T> coleccion);
+	/**
+	 * Método para cargar el archivo
+	 * @param <T>
+	 */
+	public <T> void cargarArchivo();
 }
