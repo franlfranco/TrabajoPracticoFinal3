@@ -143,7 +143,7 @@ public class ListaDeElementos implements IArchivos {
 	 * Carga a los archivos elementosCompuestos.dat y personajes.dat a partir de la lista de elementos
 	 */
 	@Override
-	public <T> void cargarArchivo() {
+	public void cargarArchivo() {
 		cargarArchivoCompuestos();
 		cargarArchivoPersonajes();
 	}

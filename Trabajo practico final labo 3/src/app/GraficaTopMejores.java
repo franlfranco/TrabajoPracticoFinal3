@@ -63,31 +63,31 @@ public class GraficaTopMejores extends JDialog {
 			}
 		getContentPane().add(personajeObjetivo);
 		
-		top1 = new JLabel("1 - 00:00:00 - Jugador 1");
+		top1 = new JLabel("1 - --------------------------");
 		top1.setForeground(new Color(255, 0, 0));
 		top1.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
 		top1.setBounds(24, 24, 400, 33);
 		getContentPane().add(top1);
 		
-		top2 = new JLabel("2 - 00:00:00 - Jugador 2");
+		top2 = new JLabel("2 - --------------------------");
 		top2.setForeground(new Color(0, 0, 255));
 		top2.setFont(new Font("Comic Sans MS", Font.ITALIC, 20));
 		top2.setBounds(24, 68, 400, 37);
 		getContentPane().add(top2);
 		
-		top3 = new JLabel("3 - 00:00:00 - Jugador 3");
+		top3 = new JLabel("3 - --------------------------");
 		top3.setForeground(new Color(0, 128, 0));
 		top3.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 		top3.setBounds(24, 116, 400, 35);
 		getContentPane().add(top3);
 		
-		top4 = new JLabel("4 - 00:00:00 - Jugador 4");
+		top4 = new JLabel("4 - --------------------------");
 		top4.setForeground(new Color(128, 128, 128));
 		top4.setFont(new Font("Comic Sans MS", Font.ITALIC, 14));
 		top4.setBounds(24, 162, 400, 20);
 		getContentPane().add(top4);
 		
-		top5 = new JLabel("5 - 00:00:00 - Jugador 5");
+		top5 = new JLabel("5 - --------------------------");
 		top5.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
 		top5.setBounds(23, 193, 401, 27);
 		getContentPane().add(top5);
@@ -97,6 +97,12 @@ public class GraficaTopMejores extends JDialog {
 			public void actionPerformed(ActionEvent arg0) {
 				Personaje aux = (Personaje)personajeObjetivo.getItemAt(personajeObjetivo.getSelectedIndex());
 				ListaPartidas aux2 = aux.getListaPartidas();
+				top1.setText("1 - --------------------------");
+				top2.setText("2 - --------------------------");
+				top3.setText("3 - --------------------------");
+				top4.setText("4 - --------------------------");
+				top5.setText("5 - --------------------------");
+				
 				try {
 					top1.setText(aux2.getTop(1));
 					top2.setText(aux2.getTop(2));

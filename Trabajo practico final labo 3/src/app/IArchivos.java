@@ -12,5 +12,5 @@ public interface IArchivos {
 	 * Método para cargar el archivo
 	 * @param <T>
 	 */
-	public <T> void cargarArchivo();
+	public void cargarArchivo();
 }

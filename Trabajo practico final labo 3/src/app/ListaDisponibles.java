@@ -100,7 +100,7 @@ public class ListaDisponibles implements IArchivos {
 	 * Carga a partir del ArrayList al archivo elementosIniciales.dat
 	 */
 	@Override
-	public <T> void cargarArchivo() {
+	public void cargarArchivo() {
 		FileOutputStream archivoSalida = null;
 		ObjectOutputStream objetoSalida = null;
 		try {

@@ -158,7 +158,7 @@ public class ListaPartidas implements IArchivos{
 	}
 
 	@Override
-	public <T> void cargarArchivo() {
+	public void cargarArchivo() {
 		FileOutputStream archivoSalida = null;
 		ObjectOutputStream objetoSalida = null;
 		try {
