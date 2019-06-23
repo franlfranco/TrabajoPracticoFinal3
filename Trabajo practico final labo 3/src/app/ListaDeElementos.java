@@ -88,7 +88,7 @@ public class ListaDeElementos implements IArchivos {
 		ObjectInputStream registroEntrada;
 		FileInputStream archivoEntrada;
 		try {
-			archivoEntrada = new FileInputStream(".\\archivos\\personajes.dat");
+			archivoEntrada = new FileInputStream("./archivos/personajes.dat");
 			objetoEntrada = new ObjectInputStream(archivoEntrada);
 			registroEntrada = new ObjectInputStream(archivoEntrada);
 
@@ -120,7 +120,7 @@ public class ListaDeElementos implements IArchivos {
 		ObjectInputStream objetoEntrada;
 		FileInputStream archivoEntrada;
 		try {
-			archivoEntrada = new FileInputStream(".\\archivos\\elementosCompuestos.dat");
+			archivoEntrada = new FileInputStream("./archivos/elementosCompuestos.dat");
 			objetoEntrada = new ObjectInputStream(archivoEntrada);
 
 			ElementoCompuesto aux = (ElementoCompuesto)objetoEntrada.readObject();
@@ -154,7 +154,7 @@ public class ListaDeElementos implements IArchivos {
 		ObjectOutputStream objetoSalidaCompuestos = null;
 		
 		try {
-			archivoSalidaCompuestos = new FileOutputStream(".\\archivos\\elementosCompuestos.dat");
+			archivoSalidaCompuestos = new FileOutputStream("./archivos/elementosCompuestos.dat");
 			objetoSalidaCompuestos = new ObjectOutputStream(archivoSalidaCompuestos);
 			ElementoCompuesto aux = null;
 			
@@ -184,7 +184,7 @@ public class ListaDeElementos implements IArchivos {
 		ObjectOutputStream objetoSalidaRegistros = null;
 		
 		try {
-			archivoSalidaPersonajes = new FileOutputStream(".\\archivos\\personajes.dat");
+			archivoSalidaPersonajes = new FileOutputStream("./archivos/personajes.dat");
 			objetoSalidaPersonajes = new ObjectOutputStream(archivoSalidaPersonajes);
 			objetoSalidaRegistros = new ObjectOutputStream(archivoSalidaPersonajes);
 			Personaje aux = null;
